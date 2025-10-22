@@ -1,0 +1,91 @@
+"use client";
+
+import Image from "next/image";
+
+// Figma assets
+const imgBgBorder = "http://localhost:3845/assets/67092db3a5da3f1ca9de0c58d1903d9e33dbbcb3.png";
+const imgBgBorder1 = "http://localhost:3845/assets/764302b85450450702c9b2aa5d9fa3cd57903153.png";
+const imgBgBorder2 = "http://localhost:3845/assets/9246716678e0a0d4d044cea9975681e790d77c1d.png";
+const imgBgBorder3 = "http://localhost:3845/assets/609f63a255e2acc4b5f5b4cdcb544b4ca0343097.png";
+
+const steps = [
+  {
+    title: "More customers",
+    percentage: "92%",
+    description: "says With Tribly, we're capturing more customer data than ever before. It's helping us reach new audiences and convert them into loyal customers",
+    bg: imgBgBorder
+  },
+  {
+    title: "Strong customer relationship",
+    percentage: "88%",
+    description: "Tribly keeps us connected with our customers in a way that feels personal. The reminders and insights make it easier to nurture stronger relationships and earn trust",
+    bg: imgBgBorder1
+  },
+  {
+    title: "More revenue",
+    percentage: "64%",
+    description: "noticed a real difference in revenue since using Tribly. The platform helps us engage better, reduce drop-offs, and drive repeat sales",
+    bg: imgBgBorder2
+  },
+  {
+    title: "Automate operations",
+    percentage: "90%",
+    description: "Says tribly takes care of the routine tasks we used to spend hours on. Automating operations has freed up our team to focus on strategy and growth.",
+    bg: imgBgBorder3
+  }
+];
+
+export default function HowItWorksMobile() {
+  return (
+    <section className="relative w-full py-[87px]">
+      <div className="max-w-[411px] mx-auto px-[28.875px]">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center text-black mb-[137px]">
+          <div className="flex flex-col font-semibold justify-center text-[32px] w-[343px]">
+            <p className="leading-[normal]">How it works</p>
+          </div>
+          <div className="flex flex-col font-light justify-center text-[20px] w-[285px]">
+            <p className="leading-[normal]">See how real businesses use Tribly to grow smarter.</p>
+          </div>
+        </div>
+
+        {/* Steps */}
+        <div className="flex flex-col gap-[30px] items-center justify-center w-full">
+          {steps.map((step, index) => (
+            <div key={index} className="relative h-[112.5px] w-[353.25px]">
+              {/* Border */}
+              <div className="absolute border-[0.281px] border-black border-solid h-full left-0 rounded-[280.969px] top-0 w-full" />
+              
+              {/* Image background */}
+              <div className="absolute border-[0.281px] border-black border-solid h-[108px] left-[2.25px] rounded-[280.969px] top-[2.25px] w-[142.816px] overflow-hidden">
+                <Image 
+                  alt={step.title} 
+                  className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[280.969px] size-full" 
+                  src={step.bg}
+                  width={143}
+                  height={108}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="absolute flex flex-col gap-[4.5px] items-start left-[151.59px] top-[29.98px]">
+                <div className="flex flex-col font-semibold justify-center text-[18px] text-black w-full">
+                  <p className="leading-[normal]">{step.title}</p>
+                </div>
+                <div className="flex gap-[4.219px] items-start text-black w-full">
+                  <div className="flex flex-col font-semibold justify-center text-[18px] text-nowrap">
+                    <p className="leading-[normal] whitespace-pre">{step.percentage}</p>
+                  </div>
+                  <div className="flex flex-col font-normal justify-center text-[6.75px] w-[145.406px]">
+                    <p className="leading-[normal]">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+

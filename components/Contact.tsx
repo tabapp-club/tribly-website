@@ -1,0 +1,89 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const imgFrame = "http://localhost:3845/assets/3a314d1d9e284dcb243ecddec5ae9a46f6e59be4.svg";
+const imgArrow1 = "http://localhost:3845/assets/8ecd97ffffa628431cc33e0f484d4df3a4da91f0.svg";
+const imgArrow2 = "http://localhost:3845/assets/95027ba8e4ca33ffc681042f198e427e52969a17.svg";
+const imgEllipse31 = "http://localhost:3845/assets/0c9f815f212d59ad08474c607e4e4ce93c4fd8a5.svg";
+
+export default function Contact() {
+  return (
+    <section className="py-20 px-6">
+      <div className="max-w-[1240px] mx-auto">
+        {/* Background gradient */}
+        <div className="bg-gradient-to-b from-[#f7f1ff] to-[#ffffff] rounded-[40px] p-12">
+          {/* Contact CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col xl:flex-row items-center justify-between gap-12"
+          >
+            <div className="flex-1 max-w-[564px]">
+              <h3 className="text-[36px] font-clash text-black leading-normal">
+                Our team of experts are ready to discuss your needs and tailor a solution that works for you.
+              </h3>
+            </div>
+            
+            <div className="flex-1 max-w-[508px] w-full">
+              <div className="flex flex-col gap-6">
+                {/* Top Row */}
+                <div className="flex flex-col sm:flex-row gap-4 items-center">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white border border-[#9747ff] flex items-center justify-center gap-4 h-[96px] px-6 py-4 rounded-[99px] w-full sm:w-auto min-w-[253px] cursor-pointer shadow-[0_6px_0_#9747FF]"
+                  >
+                    <span className="text-[20px] font-clash font-medium text-[#9747ff]">Book a demo</span>
+                    <Image alt="" src={imgFrame} width={24} height={24} />
+                  </motion.button>
+                  
+                  <div className="w-[118px] h-[118px] bg-white border border-[#9747ff] rounded-full flex items-center justify-center">
+                    <div className="rotate-180">
+                      <Image alt="" src={imgArrow1} width={52} height={28} />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Video Row */}
+                <div className="w-full h-[118px] border border-[#9747ff] rounded-[999px] p-1.5">
+                  <div className="w-full h-full rounded-[999px] overflow-hidden">
+                    <video autoPlay className="w-full h-full object-cover" controlsList="nodownload" loop playsInline>
+                      <source src="/_videos/v1/84a0e5c0faf62f19a3aa552015573940ff58fac1" />
+                    </video>
+                  </div>
+                </div>
+                
+                {/* Bottom Row */}
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-end">
+                  <div className="w-[118px] h-[118px] bg-white border border-[#9747ff] rounded-full flex items-center justify-center">
+                    <div className="rotate-180">
+                      <Image alt="" src={imgArrow2} width={52} height={28} />
+                    </div>
+                  </div>
+                  
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white border border-[#9747ff] flex items-center gap-4 h-[96px] px-6 py-4 rounded-[99px] w-full sm:w-auto min-w-[267px] cursor-pointer shadow-[0_6px_0_#9747FF]"
+                  >
+                    <div className="flex flex-col items-start">
+                      <div className="flex items-center gap-1">
+                        <Image alt="" src={imgEllipse31} width={8} height={8} />
+                        <span className="text-[10px] font-clash font-medium text-[#13923d]">Available</span>
+                      </div>
+                      <span className="text-[20px] font-clash font-medium text-[#9747ff]">Quick call with expert</span>
+                    </div>
+                    <Image alt="" src={imgFrame} width={24} height={24} />
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
