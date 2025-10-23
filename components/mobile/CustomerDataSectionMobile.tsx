@@ -3,24 +3,24 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// Figma assets
-const imgAvatarImage60 = "http://localhost:3845/assets/c7cb4ef30d35272d3418aee23b79a17b9ec2f983.png";
-const imgAvatarImage61 = "http://localhost:3845/assets/ff38e6a7ebbf24ebe4fe502ad5d7aa6690fc7f61.png";
-const imgAvatarImage62 = "http://localhost:3845/assets/2012c3d4d964e59979626fd96ad25fab7fdeeb09.png";
-const imgAvatarImage63 = "http://localhost:3845/assets/5745c570278b3f0eecb319f62c521279924509b0.png";
-const imgAvatarImage48 = "http://localhost:3845/assets/67fee70178eb4d04731f74d6f2e21b9976bd1a2c.png";
-const imgAvatarImage49 = "http://localhost:3845/assets/e594627b1d75c62e5f161737fee57c100f4c4323.png";
-const imgAvatarImage50 = "http://localhost:3845/assets/7d3e9fb44d63d644644132f36d1434f46c1cf8af.png";
-const imgAvatarImage51 = "http://localhost:3845/assets/727dde92b9ecafef047fdf08408808ed119d178e.png";
-const imgButton = "http://localhost:3845/assets/5f0ea243307a5cfa54b65e10058b6641c8421e98.svg";
-const imgStar = "http://localhost:3845/assets/9a4e447f0372156a9b3d9b91f12545a6144a7af3.svg";
-const imgStarFilled = "http://localhost:3845/assets/2d8bbb34e1685eb52d12ca9634dc786316a97174.svg";
-const imgStarEmpty = "http://localhost:3845/assets/1a4eb2a9f72ae7e31af6bdeb5560f99a8eeb3791.svg";
-const imgButton2 = "http://localhost:3845/assets/07438a4b4d09d942923c75774025ffbf5f37f4a0.svg";
+// Local assets
+const imgAvatarImage60 = "/images/avatar-1.png";
+const imgAvatarImage61 = "/images/avatar-2.png";
+const imgAvatarImage62 = "/images/avatar-3.png";
+const imgAvatarImage63 = "/images/avatar-4.png";
+const imgAvatarImage48 = "/images/avatar-5.png";
+const imgAvatarImage49 = "/images/avatar-6.png";
+const imgAvatarImage50 = "/images/avatar-7.png";
+const imgAvatarImage51 = "/images/avatar-8.png";
+const imgButton = "/icons/button-purple.svg";
+const imgStar = "/icons/star-half.svg";
+const imgStarFilled = "/icons/star-filled.svg";
+const imgStarEmpty = "/icons/star-empty.svg";
+const imgButton2 = "/icons/button-blue.svg";
 
 export default function CustomerDataSectionMobile() {
   return (
-    <section className="relative w-full px-[8px] py-[60px]">
+    <section className="relative w-full px-[8px] py-[40px] -mt-[150px]">
       <div className="relative h-[843px] w-full max-w-[396px] mx-auto">
         {/* Background gradient */}
         <div className="absolute bg-gradient-to-b from-[#e2f1fd] h-[752px] left-1/2 rounded-[40px] to-[#ffffff] to-[99.99%] top-0 translate-x-[-50%] w-[396px]" />
@@ -41,7 +41,7 @@ export default function CustomerDataSectionMobile() {
             <p className="leading-[normal]">Data-driven insights. Personalized experiences.</p>
           </div>
           <div className="flex flex-col font-normal justify-center relative shrink-0 text-[24px] w-full">
-            <p className="leading-[1.4]">Transform raw customer data into actionable insights. Our Customer Data Hub centralizes all customer information, enabling you to create hyper-personalized experiences that drive engagement and loyalty.</p>
+            <p className="leading-[1.4]">Transform customer data into actionable insights. Create hyper-personalized experiences that drive engagement and loyalty.</p>
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export default function CustomerDataSectionMobile() {
           
           {/* Scrolling cards - Row 1 (bottom row) */}
           <motion.div
-            className="absolute content-stretch flex gap-[12px] items-center top-[565.13px] z-10"
+            className="absolute content-stretch flex gap-[12px] items-center top-[436px] z-10"
             animate={{
               x: ["0%", "-50%"],
             }}
@@ -62,14 +62,14 @@ export default function CustomerDataSectionMobile() {
               ease: "linear",
             }}
           >
-            {/* Card 1: 1,250 customer profiles updated */}
-            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-medium justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 1: 245 inactive customers */}
+            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-medium justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[180px]">
                 <p className="mb-0">
-                  <span className="font-semibold not-italic text-[18px]">1,250</span>
+                  <span className="font-semibold not-italic text-[18px]">245</span>
                   <span className="text-[13.5px]"> </span>
                 </p>
-                <p className="text-[9px]">customer profiles updated — sync data across all touchpoints.</p>
+                <p className="text-[9px]">inactive customers — re-engage them with targeted campaigns.</p>
               </div>
               <div className="content-stretch flex gap-[9px] items-center relative shrink-0 w-full">
                 <div className="box-border content-stretch flex items-center pl-[4.5px] pr-[13.5px] py-[4.5px] relative shrink-0">
@@ -92,24 +92,24 @@ export default function CustomerDataSectionMobile() {
               </div>
             </div>
 
-            {/* Card 2: 890 purchase histories analyzed */}
-            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 2: 156 high-value customers */}
+            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="leading-[1.6]">
-                  <span className="text-[13.5px]">890</span>
+                  <span className="text-[13.5px]">156</span>
                   <span className="text-[22.5px]"> </span>
-                  <span className="text-[11.25px]">purchase histories analyzed — </span>
-                  <span className="font-normal not-italic text-[11.25px]">identify buying patterns.</span>
+                  <span className="text-[11.25px]">high-value customers — </span>
+                  <span className="font-normal not-italic text-[11.25px]">create VIP experiences for them.</span>
                 </p>
               </div>
             </div>
 
-            {/* Card 3: 567 behavioral insights generated */}
-            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[195.75px]">
+            {/* Card 3: 89 at-risk customers */}
+            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[220px]">
                 <p className="leading-[1.6] whitespace-pre-wrap">
-                  <span className="font-semibold not-italic text-[20.25px]">567 </span>
-                  <span className="text-[11.25px]"> behavioral insights generated — personalize customer experiences.</span>
+                  <span className="font-semibold not-italic text-[20.25px]">89 </span>
+                  <span className="text-[11.25px]"> at-risk customers — prevent churn with retention campaigns.</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[9px] items-center relative shrink-0 w-full">
@@ -133,12 +133,12 @@ export default function CustomerDataSectionMobile() {
               </div>
             </div>
 
-            {/* Card 4: 234 customers segmented */}
-            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 4: 67 new customers */}
+            <div className="bg-white border-[#1e40af] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[220px]">
                 <p className="leading-[1.6]">
-                  <span className="text-[22.5px]">234 </span>
-                  <span className="font-normal not-italic text-[11.25px]">customers segmented by preferences — target them effectively.</span>
+                  <span className="text-[22.5px]">67 </span>
+                  <span className="font-normal not-italic text-[11.25px]">new customers — onboard them with welcome sequences.</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[6.75px] items-center justify-center relative shrink-0 w-[163.125px]">
@@ -185,7 +185,7 @@ export default function CustomerDataSectionMobile() {
           
           {/* Scrolling cards - Row 2 (top row) */}
           <motion.div
-            className="absolute content-stretch flex gap-[12px] items-center top-[451px] z-10"
+            className="absolute content-stretch flex gap-[12px] items-center top-[322px] z-10"
             animate={{
               x: ["-50%", "0%"],
             }}

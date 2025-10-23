@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import ExpertCallModal from "../ExpertCallModal";
 
-// Figma assets
-const imgFrame1 = "http://localhost:3845/assets/a2e8a793ef0e4920a7ec9a574364a783832d9680.svg";
-const img3 = "http://localhost:3845/assets/c77c79db9b131dbed18e8ec27d1d05d893dab8db.svg";
-const imgEllipse32 = "http://localhost:3845/assets/268d628b6134878341af1b4e3f3f44482536a65a.svg";
+// Local assets
+const imgFrame1 = "/icons/arrow-right-purple.svg";
+const img3 = "/icons/arrow-pink.svg";
+const imgEllipse32 = "/icons/ellipse-green.svg";
 
 export default function ContactMobile() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative w-full py-[60px]">
       <div className="max-w-[381px] mx-auto px-[16px]">
@@ -64,7 +67,10 @@ export default function ContactMobile() {
               </div>
             </div>
 
-            <button className="bg-white border-[#9747ff] border-[0.75px] border-solid flex gap-[12px] h-[72.032px] items-center justify-center px-[18px] py-[12px] rounded-[74.25px] flex-1 shadow-[0px_6px_0px_0px_#9747FF]">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-white border-[#9747ff] border-[0.75px] border-solid flex gap-[12px] h-[72.032px] items-center justify-center px-[18px] py-[12px] rounded-[74.25px] flex-1 shadow-[0px_6px_0px_0px_#9747FF]"
+            >
               <div className="flex flex-col items-start justify-center">
                 <div className="flex gap-[3px] items-center">
                   <div className="relative shrink-0 size-[6px]">
@@ -85,6 +91,9 @@ export default function ContactMobile() {
           </div>
         </div>
       </div>
+
+      {/* Expert Call Modal */}
+      <ExpertCallModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

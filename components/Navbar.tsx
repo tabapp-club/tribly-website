@@ -5,10 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-// Figma assets
-const imgFrame = "http://localhost:3845/assets/5e24690834cd37719c61b168788953846609e6e3.svg";
-const imgFrame2 = "http://localhost:3845/assets/3a314d1d9e284dcb243ecddec5ae9a46f6e59be4.svg";
-const imgHugeiconsMenuTwoLine = "http://localhost:3845/assets/c2c4ab0cdc582c4f4e34a565d2a7507a16043d23.svg";
+// Local assets
+const imgFrame = "/icons/arrow-right-purple.svg";
+const imgFrame2 = "/icons/arrow-right-purple.svg";
+const imgHugeiconsMenuTwoLine = "/icons/button-icon-1.svg";
 
 // Menu data
 const menuItems = {
@@ -52,6 +52,7 @@ const menuItems = {
       "Furniture & Home Décor"
     ]
   },
+  About: [],
   Pricing: [
     "Starter Plan",
     "Professional Plan",
@@ -104,11 +105,9 @@ export default function Navbar() {
           className="flex items-center justify-center relative shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-            <div className="relative size-[40px]">
-              <Image alt="Menu" className="block max-w-none size-full" src={imgHugeiconsMenuTwoLine} width={40} height={40} />
-            </div>
-          </div>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.3335 15H6.66683M33.3335 25H16.6668" stroke="#9747FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </div>
 
@@ -127,15 +126,11 @@ export default function Navbar() {
         <div className="hidden lg:flex content-stretch gap-[16px] items-center justify-center relative shrink-0">
           {Object.keys(menuItems).map((item) => (
             <div key={item} className="relative">
-              {item === "Pricing" ? (
-                // Simple link for Pricing
-                <Link 
-                  href="/pricing"
-                  className="font-manrope font-bold leading-[26px] relative text-[#090909] text-[15.6px] text-nowrap whitespace-pre hover:text-[#9747ff] transition-colors px-[8px] py-0"
-                  onClick={closeDropdowns}
-                >
+              {item === "About" || item === "Pricing" ? (
+                // Non-clickable for About and Pricing
+                <div className="font-manrope font-bold leading-[26px] relative text-[#090909] text-[15.6px] text-nowrap whitespace-pre cursor-default px-[8px] py-0">
                   {item}
-                </Link>
+                </div>
               ) : (
                 // Dropdown for other items
                 <button 
@@ -157,8 +152,8 @@ export default function Navbar() {
                 </button>
               )}
 
-              {/* Dropdown Menu - Only for non-Pricing items */}
-              {item !== "Pricing" && (
+              {/* Dropdown Menu - Only for dropdown items */}
+              {item !== "About" && item !== "Pricing" && (
                 <AnimatePresence>
                   {activeDropdown === item && (
                     <motion.div
@@ -183,7 +178,7 @@ export default function Navbar() {
                                   {subItems.map((subItem, index) => (
                                     <Link
                                       key={index}
-                                      href={`/industry/${category.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+                                      href={`/industry/${subItem.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-')}`}
                                       className="block text-[14px] font-medium text-gray-700 hover:text-[#9747ff] hover:bg-[#f7f1ff] px-2 py-1 rounded-md transition-all duration-200 hover:translate-x-1"
                                       onClick={closeDropdowns}
                                     >
@@ -199,14 +194,23 @@ export default function Navbar() {
                         // Regular dropdown for other items
                         <div className="py-2">
                           {(menuItems[item as keyof typeof menuItems] as string[]).map((subItem, index) => (
-                            <Link
-                              key={index}
-                              href={`/${item.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
-                              className="block px-4 py-3 text-[14px] font-medium text-gray-700 hover:bg-[#f7f1ff] hover:text-[#9747ff] transition-colors"
-                              onClick={closeDropdowns}
-                            >
-                              {subItem}
-                            </Link>
+                            item === "Solutions" || item === "Resources" || item === "Pricing" ? (
+                              <div
+                                key={index}
+                                className="block px-4 py-3 text-[14px] font-medium text-gray-700 cursor-default"
+                              >
+                                {subItem}
+                              </div>
+                            ) : (
+                              <Link
+                                key={index}
+                                href={`/${item.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+                                className="block px-4 py-3 text-[14px] font-medium text-gray-700 hover:bg-[#f7f1ff] hover:text-[#9747ff] transition-colors"
+                                onClick={closeDropdowns}
+                              >
+                                {subItem}
+                              </Link>
+                            )
                           ))}
                         </div>
                       )}
@@ -221,16 +225,18 @@ export default function Navbar() {
         {/* Desktop CTA Buttons */}
         <div className="content-stretch gap-[8px] items-center relative shrink-0 flex">
           {/* Login to tribly Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white border border-[#9747ff] border-solid box-border content-stretch flex gap-[8px] h-[48px] items-center justify-center px-[24px] py-[8px] relative rounded-[99px] shrink-0 hover:bg-[#f7f1ff] transition-colors shadow-[0_4px_0_#9747FF]"
-          >
-            <span className="font-manrope font-medium leading-[26px] relative shrink-0 text-[#9747ff] text-[15.1px] text-nowrap whitespace-pre">
-              Login to tribly
-            </span>
-            <Image alt="Arrow" className="block max-w-none size-[24px]" src={imgFrame2} width={24} height={24} />
-          </motion.button>
+          <a href="https://app.tribly.ai/login" target="_blank" rel="noopener noreferrer">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white border border-[#9747ff] border-solid box-border content-stretch flex gap-[8px] h-[48px] items-center justify-center px-[24px] py-[8px] relative rounded-[99px] shrink-0 hover:bg-[#f7f1ff] transition-colors shadow-[0_4px_0_#9747FF]"
+            >
+              <span className="font-manrope font-medium leading-[26px] relative shrink-0 text-[#9747ff] text-[15.1px] text-nowrap whitespace-pre">
+                Login to tribly
+              </span>
+              <Image alt="Arrow" className="block max-w-none size-[24px]" src={imgFrame2} width={24} height={24} />
+            </motion.button>
+          </a>
         </div>
       </div>
 
@@ -273,18 +279,11 @@ export default function Navbar() {
                 <div className="space-y-6 sm:space-y-8">
                   {Object.keys(menuItems).map((item) => (
                     <div key={item}>
-                      {item === "Pricing" ? (
-                        // Simple link for Pricing in mobile
-                        <Link
-                          href="/pricing"
-                          className="w-full text-left font-manrope font-bold text-[18px] text-[#090909] hover:text-[#9747ff] transition-colors py-3 block"
-                          onClick={() => {
-                            setIsMobileMenuOpen(false);
-                            closeDropdowns();
-                          }}
-                        >
+                      {item === "About" || item === "Pricing" ? (
+                        // Non-clickable for About and Pricing in mobile
+                        <div className="w-full text-left font-manrope font-bold text-[18px] text-[#090909] cursor-default py-3 block">
                           {item}
-                        </Link>
+                        </div>
                       ) : (
                         // Dropdown for other items in mobile
                         <>
@@ -317,7 +316,7 @@ export default function Navbar() {
                                           {subItems.map((subItem, index) => (
                                             <Link
                                               key={index}
-                                              href={`/industry/${category.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+                                              href={`/industry/${subItem.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-')}`}
                                               className="block text-[12px] font-medium text-gray-600 hover:text-[#9747ff] transition-colors py-2 px-2 rounded-md hover:bg-gray-50"
                                               onClick={() => {
                                                 setIsMobileMenuOpen(false);
@@ -333,17 +332,26 @@ export default function Navbar() {
                                   ) : (
                                     // Regular mobile menu for other items
                                     (menuItems[item as keyof typeof menuItems] as string[]).map((subItem, index) => (
-                                      <Link
-                                        key={index}
-                                        href={`/${item.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
-                                        className="block text-[14px] text-gray-600 hover:text-[#9747ff] transition-colors py-1"
-                                        onClick={() => {
-                                          setIsMobileMenuOpen(false);
-                                          closeDropdowns();
-                                        }}
-                                      >
-                                        {subItem}
-                                      </Link>
+                                      item === "Solutions" || item === "Resources" || item === "Pricing" ? (
+                                        <div
+                                          key={index}
+                                          className="block text-[14px] text-gray-600 cursor-default py-1"
+                                        >
+                                          {subItem}
+                                        </div>
+                                      ) : (
+                                        <Link
+                                          key={index}
+                                          href={`/${item.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+                                          className="block text-[14px] text-gray-600 hover:text-[#9747ff] transition-colors py-1"
+                                          onClick={() => {
+                                            setIsMobileMenuOpen(false);
+                                            closeDropdowns();
+                                          }}
+                                        >
+                                          {subItem}
+                                        </Link>
+                                      )
                                     ))
                                   )}
                                 </div>
@@ -358,17 +366,19 @@ export default function Navbar() {
 
                 {/* Mobile CTA Buttons */}
                 <div className="mt-12 sm:mt-16 space-y-4 sm:space-y-6">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-white border border-[#9747ff] border-solid flex gap-[12px] h-[56px] items-center justify-center px-[24px] py-[12px] rounded-[99px] hover:bg-[#f7f1ff] transition-colors shadow-[0_4px_0_#9747FF]"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <span className="font-manrope font-medium text-[#9747ff] text-[16px]">
-                      Login to tribly
-                    </span>
-                    <Image alt="Arrow" className="size-[24px]" src={imgFrame2} width={24} height={24} />
-                  </motion.button>
+                  <a href="https://app.tribly.ai/login" target="_blank" rel="noopener noreferrer" className="block w-full">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full bg-white border border-[#9747ff] border-solid flex gap-[12px] h-[56px] items-center justify-center px-[24px] py-[12px] rounded-[99px] hover:bg-[#f7f1ff] transition-colors shadow-[0_4px_0_#9747FF]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="font-manrope font-medium text-[#9747ff] text-[16px]">
+                        Login to tribly
+                      </span>
+                      <Image alt="Arrow" className="size-[24px]" src={imgFrame2} width={24} height={24} />
+                    </motion.button>
+                  </a>
                 </div>
               </div>
             </motion.div>

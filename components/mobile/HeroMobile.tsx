@@ -2,13 +2,16 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import ExpertCallModal from "../ExpertCallModal";
 
-// Figma assets
-const imgFrame = "http://localhost:3845/assets/3a314d1d9e284dcb243ecddec5ae9a46f6e59be4.svg";
-const imgEllipse31 = "http://localhost:3845/assets/0c9f815f212d59ad08474c607e4e4ce93c4fd8a5.svg";
-const imgImage = "http://localhost:3845/assets/32b32e1f9e4b4776a02f759ef34ece9156b69fbf.png";
+// Local assets
+const imgFrame = "/icons/arrow-right-purple.svg";
+const imgEllipse31 = "/icons/ellipse-green.svg";
+const imgImage = "/images/hero-image-1.png";
 
 export default function HeroMobile() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative bg-[#f7f1ff] w-full overflow-hidden min-h-screen pt-[168px]">
       {/* Hero Content Container */}
@@ -38,23 +41,26 @@ export default function HeroMobile() {
 
         {/* CTA Buttons */}
         <div className="absolute content-stretch flex flex-col gap-[16px] items-start justify-center left-0 top-[312px]">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-white border border-[#9747ff] border-solid box-border content-stretch flex gap-[16px] h-[72px] items-center justify-center px-[24px] py-[16px] relative rounded-[99px] shrink-0 shadow-[0px_6px_0px_0px_#9747FF]"
-          >
-            <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9747ff] text-[20px] text-nowrap">
-              <p className="leading-[26px] whitespace-pre">Book a demo</p>
-            </div>
-            <div className="relative shrink-0 size-[24px]">
-              <Image alt="Arrow" className="block max-w-none size-full" src={imgFrame} width={24} height={24} />
-            </div>
-          </motion.button>
+          <a href="https://calendly.com/connect-tribly/new-meeting" target="_blank" rel="noopener noreferrer" className="w-full">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white border border-[#9747ff] border-solid box-border content-stretch flex gap-[16px] h-[72px] items-center justify-center px-[24px] py-[16px] relative rounded-[99px] shrink-0 shadow-[0px_6px_0px_0px_#9747FF] w-full"
+            >
+              <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9747ff] text-[20px] text-nowrap">
+                <p className="leading-[26px] whitespace-pre">Book a demo</p>
+              </div>
+              <div className="relative shrink-0 size-[24px]">
+                <Image alt="Arrow" className="block max-w-none size-full" src={imgFrame} width={24} height={24} />
+              </div>
+            </motion.button>
+          </a>
 
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-white border border-[#9747ff] border-solid box-border content-stretch flex gap-[16px] h-[72px] items-center justify-center px-[24px] py-[16px] relative rounded-[99px] shrink-0 shadow-[0px_6px_0px_0px_#9747FF]"
+            onClick={() => setIsModalOpen(true)}
+            className="bg-white border border-[#9747ff] border-solid box-border content-stretch flex gap-[16px] h-[72px] items-center justify-center px-[24px] py-[16px] relative rounded-[99px] shrink-0 shadow-[0px_6px_0px_0px_#9747FF] w-full"
           >
             <div className="content-stretch flex flex-col items-start justify-center relative shrink-0">
               <div className="content-stretch flex gap-[4px] items-center relative shrink-0">
@@ -203,6 +209,9 @@ export default function HeroMobile() {
           </div>
         </div>
       </div>
+
+      {/* Expert Call Modal */}
+      <ExpertCallModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

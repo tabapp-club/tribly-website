@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// Figma assets
-const imgAvatarImage180 = "http://localhost:3845/assets/c42678ed62236a5a8a4bcab0bbb62050b6afa076.png";
-const imgAvatarImage181 = "http://localhost:3845/assets/2405e02a9413a640fe960350945e8e8286b9e420.png";
-const imgAvatarImage182 = "http://localhost:3845/assets/07905147ffbba7b206b94aceb0fc9ee4568d309d.png";
-const imgAvatarImage183 = "http://localhost:3845/assets/6eb5238afae3694f2a7851f6cbbc1ed0566b53e0.png";
-const imgAvatarImage184 = "http://localhost:3845/assets/bf1ce766e29aa6f9014fbaca20461a4f1c43cfdb.png";
+// Local assets
+const imgAvatarImage180 = "/images/testimonial-1.png";
+const imgAvatarImage181 = "/images/testimonial-2.png";
+const imgAvatarImage182 = "/images/testimonial-3.png";
+const imgAvatarImage183 = "/images/testimonial-4.png";
+const imgAvatarImage184 = "/images/testimonial-5.png";
 
 const testimonials = [
   {

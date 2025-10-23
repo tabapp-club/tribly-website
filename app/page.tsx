@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import CommunicationAutomation from "@/components/CommunicationAutomation";
 import RetentionSection from "@/components/RetentionSection";
 import EngagementSection from "@/components/EngagementSection";
 import CustomerDataSection from "@/components/CustomerDataSection";
-import AutomationAnalytics from "@/components/AutomationAnalytics";
 import Industries from "@/components/Industries";
 import Testimonials from "@/components/Testimonials";
 import HowItWorks from "@/components/HowItWorks";
@@ -13,10 +13,10 @@ import Footer from "@/components/Footer";
 // Mobile Components
 import HeroMobile from "@/components/mobile/HeroMobile";
 import AISectionMobile from "@/components/mobile/AISectionMobile";
+import CommunicationAutomationMobile from "@/components/mobile/CommunicationAutomationMobile";
 import RetentionSectionMobile from "@/components/mobile/RetentionSectionMobile";
 import EngagementSectionMobile from "@/components/mobile/EngagementSectionMobile";
 import CustomerDataSectionMobile from "@/components/mobile/CustomerDataSectionMobile";
-import AutomationAnalyticsMobile from "@/components/mobile/AutomationAnalyticsMobile";
 import IndustriesMobile from "@/components/mobile/IndustriesMobile";
 import TestimonialsMobile from "@/components/mobile/TestimonialsMobile";
 import HowItWorksMobile from "@/components/mobile/HowItWorksMobile";
@@ -52,12 +52,13 @@ export default function Home() {
           </div>
         </section>
 
+        <CommunicationAutomation />
         <RetentionSection />
         <div className="h-[164px]" />
         <EngagementSection />
         <div className="h-[164px]" />
         <CustomerDataSection />
-        <AutomationAnalytics />
+        <div className="h-[124px]" />
         <Industries />
         <Testimonials />
         <HowItWorks />
@@ -69,10 +70,10 @@ export default function Home() {
       <div className="block md:hidden">
         <HeroMobile />
         <AISectionMobile />
+        <CommunicationAutomationMobile />
         <RetentionSectionMobile />
         <EngagementSectionMobile />
         <CustomerDataSectionMobile />
-        <AutomationAnalyticsMobile />
         <IndustriesMobile />
         <TestimonialsMobile />
         <HowItWorksMobile />

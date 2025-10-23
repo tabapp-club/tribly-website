@@ -3,20 +3,20 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// Figma assets
-const imgAvatarImage60 = "http://localhost:3845/assets/c7cb4ef30d35272d3418aee23b79a17b9ec2f983.png";
-const imgAvatarImage61 = "http://localhost:3845/assets/ff38e6a7ebbf24ebe4fe502ad5d7aa6690fc7f61.png";
-const imgAvatarImage62 = "http://localhost:3845/assets/2012c3d4d964e59979626fd96ad25fab7fdeeb09.png";
-const imgAvatarImage63 = "http://localhost:3845/assets/5745c570278b3f0eecb319f62c521279924509b0.png";
-const imgAvatarImage48 = "http://localhost:3845/assets/67fee70178eb4d04731f74d6f2e21b9976bd1a2c.png";
-const imgAvatarImage49 = "http://localhost:3845/assets/e594627b1d75c62e5f161737fee57c100f4c4323.png";
-const imgAvatarImage50 = "http://localhost:3845/assets/7d3e9fb44d63d644644132f36d1434f46c1cf8af.png";
-const imgAvatarImage51 = "http://localhost:3845/assets/727dde92b9ecafef047fdf08408808ed119d178e.png";
-const imgButton = "http://localhost:3845/assets/aef5c75d3b33243eb1b713de17252e9548c6d229.svg";
-const imgStar = "http://localhost:3845/assets/5e1b3c7220930af1c1ab0d38c5b30516ad1d15b5.svg";
-const imgStarFilled = "http://localhost:3845/assets/da9f6fbafabc08d1c4c9fdba136e6e000622cc29.svg";
-const imgStarEmpty = "http://localhost:3845/assets/cf16db22833c6b974ce8e3252c79d86637a8f847.svg";
-const imgButton1 = "http://localhost:3845/assets/33b888ca5be36ce35528d2338e6b09eb7101bf07.svg";
+// Local assets
+const imgAvatarImage60 = "/images/avatar-1.png";
+const imgAvatarImage61 = "/images/avatar-2.png";
+const imgAvatarImage62 = "/images/avatar-3.png";
+const imgAvatarImage63 = "/images/avatar-4.png";
+const imgAvatarImage48 = "/images/avatar-5.png";
+const imgAvatarImage49 = "/images/avatar-6.png";
+const imgAvatarImage50 = "/images/avatar-7.png";
+const imgAvatarImage51 = "/images/avatar-8.png";
+const imgButton = "/icons/button-purple.svg";
+const imgStar = "/icons/star-half.svg";
+const imgStarFilled = "/icons/star-filled.svg";
+const imgStarEmpty = "/icons/star-empty.svg";
+const imgButton1 = "/icons/button-green.svg";
 
 export default function RetentionSection() {
   return (

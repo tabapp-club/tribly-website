@@ -3,19 +3,19 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const imgAvatarImage60 = "http://localhost:3845/assets/c7cb4ef30d35272d3418aee23b79a17b9ec2f983.png";
-const imgAvatarImage61 = "http://localhost:3845/assets/ff38e6a7ebbf24ebe4fe502ad5d7aa6690fc7f61.png";
-const imgAvatarImage62 = "http://localhost:3845/assets/2012c3d4d964e59979626fd96ad25fab7fdeeb09.png";
-const imgAvatarImage63 = "http://localhost:3845/assets/5745c570278b3f0eecb319f62c521279924509b0.png";
-const imgAvatarImage48 = "http://localhost:3845/assets/67fee70178eb4d04731f74d6f2e21b9976bd1a2c.png";
-const imgAvatarImage49 = "http://localhost:3845/assets/e594627b1d75c62e5f161737fee57c100f4c4323.png";
-const imgAvatarImage50 = "http://localhost:3845/assets/7d3e9fb44d63d644644132f36d1434f46c1cf8af.png";
-const imgAvatarImage51 = "http://localhost:3845/assets/727dde92b9ecafef047fdf08408808ed119d178e.png";
-const imgButton = "http://localhost:3845/assets/aef5c75d3b33243eb1b713de17252e9548c6d229.svg";
-const imgStar = "http://localhost:3845/assets/5e1b3c7220930af1c1ab0d38c5b30516ad1d15b5.svg";
-const imgStarFilled = "http://localhost:3845/assets/da9f6fbafabc08d1c4c9fdba136e6e000622cc29.svg";
-const imgStarEmpty = "http://localhost:3845/assets/cf16db22833c6b974ce8e3252c79d86637a8f847.svg";
-const imgButton1 = "http://localhost:3845/assets/252eabe1efa3ab40d8e2642db6309be9e10dc59c.svg";
+const imgAvatarImage60 = "/images/avatar-1.png";
+const imgAvatarImage61 = "/images/avatar-2.png";
+const imgAvatarImage62 = "/images/avatar-3.png";
+const imgAvatarImage63 = "/images/avatar-4.png";
+const imgAvatarImage48 = "/images/avatar-5.png";
+const imgAvatarImage49 = "/images/avatar-6.png";
+const imgAvatarImage50 = "/images/avatar-7.png";
+const imgAvatarImage51 = "/images/avatar-8.png";
+const imgButton = "/icons/button-purple.svg";
+const imgStar = "/icons/star-half.svg";
+const imgStarFilled = "/icons/star-filled.svg";
+const imgStarEmpty = "/icons/star-empty.svg";
+const imgButton1 = "/icons/button-blue.svg";
 
 export default function CustomerDataSection() {
   return (
@@ -40,10 +40,10 @@ export default function CustomerDataSection() {
         {/* Title and Description */}
         <div className="absolute content-stretch flex flex-col gap-[16px] items-start leading-[0] left-[44px] not-italic text-[#012e50] top-[140px] w-[785px] z-10">
           <h2 className="flex flex-col font-semibold justify-center text-[32px] w-full leading-[normal]">
-            Connect instantly. Engage meaningfully.
+            Data-driven insights. Personalized experiences.
           </h2>
           <p className="flex flex-col justify-center text-[24px] w-[745px] leading-[1.4] font-normal">
-            At Tribly, we believe every interaction with your customer should create impact. Our platform helps you engage customers in real-time through WhatsApp, SMS, and Email, ensuring your brand stays at the center of their attention.
+            Transform raw customer data into actionable insights. Our Customer Data Hub centralizes all customer information, enabling you to create hyper-personalized experiences that drive engagement and loyalty.
           </p>
         </div>
 
@@ -63,14 +63,14 @@ export default function CustomerDataSection() {
               ease: "linear",
             }}
           >
-            {/* Card 1: 1,250 customer profiles updated */}
-            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[10px] h-[180px] items-start justify-center px-[24px] py-[8px] relative rounded-[24px] shrink-0">
-              <div className="flex flex-col font-medium justify-center leading-[1.6] not-italic relative shrink-0 text-black w-[290px]">
+            {/* Card 1: 245 inactive customers */}
+            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[10px] h-[180px] items-start justify-center px-[12px] py-[12px] relative rounded-[24px] shrink-0">
+              <div className="flex flex-col font-medium justify-center leading-[1.6] not-italic relative shrink-0 text-black w-[320px]">
                 <p className="mb-0">
-                  <span className="font-semibold text-[32px]">1,250</span>
+                  <span className="font-semibold text-[32px]">245</span>
                   <span className="text-[24px]"> </span>
                 </p>
-                <p className="text-[16px]">customer profiles updated — sync data across all touchpoints.</p>
+                <p className="text-[16px]">inactive customers — re-engage them with targeted campaigns.</p>
               </div>
               <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full">
                 <div className="box-border content-stretch flex items-center pl-[8px] pr-[24px] py-[8px] relative shrink-0">
@@ -93,24 +93,24 @@ export default function CustomerDataSection() {
               </div>
             </div>
 
-            {/* Card 2: 890 purchase histories analyzed */}
-            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[10px] h-[180px] items-start justify-center px-[24px] py-[8px] relative rounded-[24px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-black w-[290px]">
+            {/* Card 2: 156 high-value customers */}
+            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[10px] h-[180px] items-start justify-center px-[12px] py-[12px] relative rounded-[24px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-black w-[320px]">
                 <p className="leading-[1.6]">
-                  <span className="text-[24px]">890</span>
+                  <span className="text-[24px]">156</span>
                   <span className="text-[40px]"> </span>
-                  <span className="text-[20px]">{`purchase histories analyzed — `}</span>
-                  <span className="font-normal text-[20px]">identify buying patterns.</span>
+                  <span className="text-[20px]">{`high-value customers — `}</span>
+                  <span className="font-normal text-[20px]">create VIP experiences for them.</span>
                 </p>
               </div>
             </div>
 
-            {/* Card 3: 567 behavioral insights generated */}
-            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[4px] h-[180px] items-start justify-center px-[24px] py-[8px] relative rounded-[24px] shrink-0">
-              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-black w-[348px]">
+            {/* Card 3: 89 at-risk customers */}
+            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[4px] h-[180px] items-start justify-center px-[12px] py-[12px] relative rounded-[24px] shrink-0">
+              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-black w-[380px]">
                 <p className="leading-[1.6] whitespace-pre-wrap">
-                  <span className="font-semibold text-[36px]">{`567 `}</span>
-                  <span className="text-[20px]">{` behavioral insights generated — personalize customer experiences.`}</span>
+                  <span className="font-semibold text-[36px]">{`89 `}</span>
+                  <span className="text-[20px]">{` at-risk customers — prevent churn with retention campaigns.`}</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full">
@@ -134,12 +134,12 @@ export default function CustomerDataSection() {
               </div>
             </div>
 
-            {/* Card 4: 234 customers segmented */}
-            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[4px] h-[180px] items-start justify-center px-[24px] py-[8px] relative rounded-[24px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-black w-[290px]">
+            {/* Card 4: 67 new customers */}
+            <div className="bg-white border-[#1e40af] border-[0.5px] border-solid box-border content-stretch flex flex-col gap-[4px] h-[180px] items-start justify-center px-[12px] py-[12px] relative rounded-[24px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-black w-[380px]">
                 <p className="leading-[1.6]">
-                  <span className="text-[40px]">{`234 `}</span>
-                  <span className="font-normal text-[20px]">customers segmented by preferences — target them effectively.</span>
+                  <span className="text-[40px]">{`67 `}</span>
+                  <span className="font-normal text-[20px]">new customers — onboard them with welcome sequences.</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[12px] items-center justify-center relative shrink-0 w-full">

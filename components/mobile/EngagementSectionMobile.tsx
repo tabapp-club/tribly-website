@@ -3,24 +3,24 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// Figma assets
-const imgAvatarImage60 = "http://localhost:3845/assets/c7cb4ef30d35272d3418aee23b79a17b9ec2f983.png";
-const imgAvatarImage61 = "http://localhost:3845/assets/ff38e6a7ebbf24ebe4fe502ad5d7aa6690fc7f61.png";
-const imgAvatarImage62 = "http://localhost:3845/assets/2012c3d4d964e59979626fd96ad25fab7fdeeb09.png";
-const imgAvatarImage63 = "http://localhost:3845/assets/5745c570278b3f0eecb319f62c521279924509b0.png";
-const imgAvatarImage48 = "http://localhost:3845/assets/67fee70178eb4d04731f74d6f2e21b9976bd1a2c.png";
-const imgAvatarImage49 = "http://localhost:3845/assets/e594627b1d75c62e5f161737fee57c100f4c4323.png";
-const imgAvatarImage50 = "http://localhost:3845/assets/7d3e9fb44d63d644644132f36d1434f46c1cf8af.png";
-const imgAvatarImage51 = "http://localhost:3845/assets/727dde92b9ecafef047fdf08408808ed119d178e.png";
-const imgButton = "http://localhost:3845/assets/5f0ea243307a5cfa54b65e10058b6641c8421e98.svg";
-const imgStar = "http://localhost:3845/assets/9a4e447f0372156a9b3d9b91f12545a6144a7af3.svg";
-const imgStarFilled = "http://localhost:3845/assets/2d8bbb34e1685eb52d12ca9634dc786316a97174.svg";
-const imgStarEmpty = "http://localhost:3845/assets/1a4eb2a9f72ae7e31af6bdeb5560f99a8eeb3791.svg";
-const imgButton2 = "http://localhost:3845/assets/07438a4b4d09d942923c75774025ffbf5f37f4a0.svg";
+// Local assets
+const imgAvatarImage60 = "/images/avatar-1.png";
+const imgAvatarImage61 = "/images/avatar-2.png";
+const imgAvatarImage62 = "/images/avatar-3.png";
+const imgAvatarImage63 = "/images/avatar-4.png";
+const imgAvatarImage48 = "/images/avatar-5.png";
+const imgAvatarImage49 = "/images/avatar-6.png";
+const imgAvatarImage50 = "/images/avatar-7.png";
+const imgAvatarImage51 = "/images/avatar-8.png";
+const imgButton = "/icons/button-purple.svg";
+const imgStar = "/icons/star-half.svg";
+const imgStarFilled = "/icons/star-filled.svg";
+const imgStarEmpty = "/icons/star-empty.svg";
+const imgButton2 = "/icons/button-blue.svg";
 
 export default function EngagementSectionMobile() {
   return (
-    <section className="relative w-full px-[8px] py-[60px]">
+    <section className="relative w-full px-[8px] py-[40px]">
       <div className="relative h-[843px] w-full max-w-[396px] mx-auto">
         {/* Background gradient */}
         <div className="absolute bg-gradient-to-b from-[#f1ecff] h-[752px] left-1/2 rounded-[40px] to-[#ffffff] to-[99.99%] top-0 translate-x-[-50%] w-[396px]" />
@@ -41,7 +41,7 @@ export default function EngagementSectionMobile() {
             <p className="leading-[normal]">Connect instantly. Engage meaningfully.</p>
           </div>
           <div className="flex flex-col font-normal justify-center relative shrink-0 text-[24px] w-full">
-            <p className="leading-[1.4]">At Tribly, we believe every interaction with your customer should create impact. Our platform helps you engage customers in real-time through WhatsApp, SMS, and Email, ensuring your brand stays at the center of their attention.</p>
+            <p className="leading-[1.4]">Real-time customer engagement through WhatsApp and SMS. Build lasting relationships with personalized interactions.</p>
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export default function EngagementSectionMobile() {
           
           {/* Scrolling cards - Row 1 (bottom row) */}
           <motion.div
-            className="absolute content-stretch flex gap-[12px] items-center top-[565.13px] z-10"
+            className="absolute content-stretch flex gap-[12px] items-center top-[396px] z-10"
             animate={{
               x: ["0%", "-50%"],
             }}
@@ -63,13 +63,13 @@ export default function EngagementSectionMobile() {
             }}
           >
             {/* Card 1: 180 customers opened WhatsApp messages */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-medium justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-medium justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[180px]">
                 <p className="mb-0">
                   <span className="font-semibold not-italic text-[18px]">180</span>
                   <span className="text-[13.5px]"> </span>
                 </p>
-                <p className="text-[9px]">customers opened WhatsApp messages — follow up with personalized offers.</p>
+                <p className="text-[9px]">customers opened WhatsApp messages — send them exclusive deals and promotions.</p>
               </div>
               <div className="content-stretch flex gap-[9px] items-center relative shrink-0 w-full">
                 <div className="box-border content-stretch flex items-center pl-[4.5px] pr-[13.5px] py-[4.5px] relative shrink-0">
@@ -92,24 +92,24 @@ export default function EngagementSectionMobile() {
               </div>
             </div>
 
-            {/* Card 2: 95 customers clicked email links */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 2: 95 customers clicked WhatsApp links */}
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="leading-[1.6]">
                   <span className="text-[13.5px]">95</span>
                   <span className="text-[22.5px]"> </span>
-                  <span className="text-[11.25px]">customers clicked email links — </span>
-                  <span className="font-normal not-italic text-[11.25px]">send them targeted content.</span>
+                  <span className="text-[11.25px]">customers clicked WhatsApp links — </span>
+                  <span className="font-normal not-italic text-[11.25px]">nurture them with follow-up sequences.</span>
                 </p>
               </div>
             </div>
 
             {/* Card 3: 320 SMS messages delivered */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[195.75px]">
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[220px]">
                 <p className="leading-[1.6] whitespace-pre-wrap">
                   <span className="font-semibold not-italic text-[20.25px]">320 </span>
-                  <span className="text-[11.25px]"> SMS messages delivered successfully — track engagement rates.</span>
+                  <span className="text-[11.25px]"> SMS messages delivered — send them appointment reminders and updates.</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[9px] items-center relative shrink-0 w-full">
@@ -134,11 +134,11 @@ export default function EngagementSectionMobile() {
             </div>
 
             {/* Card 4: 45 customers replied to messages */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[2.25px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[220px]">
                 <p className="leading-[1.6]">
                   <span className="text-[22.5px]">45 </span>
-                  <span className="font-normal not-italic text-[11.25px]">customers replied to messages — respond quickly to build relationships.</span>
+                  <span className="font-normal not-italic text-[11.25px]">customers replied to messages — engage them with personalized conversations.</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[6.75px] items-center justify-center relative shrink-0 w-[163.125px]">
@@ -160,13 +160,13 @@ export default function EngagementSectionMobile() {
               </div>
             </div>
 
-            {/* Card 5: 78 customers shared content */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 5: 78 customers engaged with polls */}
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-normal justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="leading-[1.6]">
                   <span className="font-semibold not-italic text-[22.5px]"> </span>
-                  <span className="font-semibold not-italic text-[27.563px]">📱 78</span>
-                  <span className="text-[11.25px]"> customers shared content — amplify your reach.</span>
+                  <span className="font-semibold not-italic text-[27.563px]">🎯 78</span>
+                  <span className="text-[11.25px]"> customers engaged with polls — gather feedback and improve services.</span>
                 </p>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function EngagementSectionMobile() {
           
           {/* Scrolling cards - Row 2 (top row) */}
           <motion.div
-            className="absolute content-stretch flex gap-[12px] items-center top-[451px] z-10"
+            className="absolute content-stretch flex gap-[12px] items-center top-[282px] z-10"
             animate={{
               x: ["-50%", "0%"],
             }}
@@ -195,35 +195,35 @@ export default function EngagementSectionMobile() {
               ease: "linear",
             }}
           >
-            {/* Card 1: 156 customers engaged with polls */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-normal justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 1: 156 customers active on WhatsApp */}
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-normal justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="mb-0">
-                  <span className="font-semibold not-italic text-[22.5px]">📊 156 </span>
+                  <span className="font-semibold not-italic text-[22.5px]">📱 156 </span>
                   <span className="text-[11.25px]">customers</span>
                 </p>
-                <p className="text-[11.25px]"> engaged with polls — gather valuable feedback.</p>
+                <p className="text-[11.25px]"> active on WhatsApp — create personalized customer journeys.</p>
               </div>
             </div>
 
             {/* Card 2: 89 customers clicked CTAs */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-normal justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-normal justify-center leading-[1.6] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="font-semibold mb-0 text-[22.5px]">🎯 89 </p>
-                <p className="text-[11.25px] whitespace-pre-wrap">customers clicked CTAs — optimize conversion paths</p>
+                <p className="text-[11.25px] whitespace-pre-wrap">customers clicked CTAs — convert them with special offers</p>
               </div>
             </div>
 
-            {/* Card 3: 234 customers viewed stories */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            {/* Card 3: 234 customers shared content */}
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="leading-[1.6] mb-0">
                   <span className="font-semibold not-italic text-[18px]">234</span>
                   <span className="text-[13.5px]"> </span>
                 </p>
                 <p className="leading-[1.6] text-[9px] whitespace-pre-wrap">
-                  <span>customers viewed stories — </span>
-                  <span className="text-[#9747ff]">boost brand awareness</span>
+                  <span>customers shared content — </span>
+                  <span className="text-[#13923d]">amplify their advocacy with rewards</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[9px] items-center relative shrink-0 w-full">
@@ -248,12 +248,12 @@ export default function EngagementSectionMobile() {
             </div>
 
             {/* Card 4: 67 customers joined events */}
-            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[13.5px] py-[4.5px] relative rounded-[13.5px] shrink-0">
-              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[163.125px]">
+            <div className="bg-white border-[#9747ff] border-[0.281px] border-solid box-border content-stretch flex flex-col gap-[5.625px] h-[101.25px] items-start justify-center px-[12px] py-[12px] relative rounded-[13.5px] shrink-0">
+              <div className="flex flex-col font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-black w-[200px]">
                 <p className="leading-[1.6]">
                   <span className="text-[18px]">67</span>
                   <span className="text-[11.25px]"> </span>
-                  <span className="font-normal not-italic text-[9px]">customers joined events — foster community engagement.</span>
+                  <span className="font-normal not-italic text-[9px]">customers joined events — create VIP experiences for them.</span>
                 </p>
               </div>
               <div className="content-stretch flex gap-[6.75px] items-center justify-center relative shrink-0 w-[163.125px]">

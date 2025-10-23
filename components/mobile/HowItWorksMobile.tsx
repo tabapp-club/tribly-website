@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 
-// Figma assets
-const imgBgBorder = "http://localhost:3845/assets/67092db3a5da3f1ca9de0c58d1903d9e33dbbcb3.png";
-const imgBgBorder1 = "http://localhost:3845/assets/764302b85450450702c9b2aa5d9fa3cd57903153.png";
-const imgBgBorder2 = "http://localhost:3845/assets/9246716678e0a0d4d044cea9975681e790d77c1d.png";
-const imgBgBorder3 = "http://localhost:3845/assets/609f63a255e2acc4b5f5b4cdcb544b4ca0343097.png";
+// Local assets
+const imgBgBorder = "/images/how-it-works-1.png";
+const imgBgBorder1 = "/images/how-it-works-2.png";
+const imgBgBorder2 = "/images/how-it-works-3.png";
+const imgBgBorder3 = "/images/how-it-works-4.png";
 
 const steps = [
   {

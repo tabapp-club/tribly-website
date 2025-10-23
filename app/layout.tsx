@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="antialiased bg-white">
+      <body className="antialiased bg-white" suppressHydrationWarning>
         {children}
       </body>
     </html>

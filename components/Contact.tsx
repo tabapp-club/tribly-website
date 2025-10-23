@@ -2,13 +2,16 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import ExpertCallModal from "./ExpertCallModal";
 
-const imgFrame = "http://localhost:3845/assets/3a314d1d9e284dcb243ecddec5ae9a46f6e59be4.svg";
-const imgArrow1 = "http://localhost:3845/assets/8ecd97ffffa628431cc33e0f484d4df3a4da91f0.svg";
-const imgArrow2 = "http://localhost:3845/assets/95027ba8e4ca33ffc681042f198e427e52969a17.svg";
-const imgEllipse31 = "http://localhost:3845/assets/0c9f815f212d59ad08474c607e4e4ce93c4fd8a5.svg";
+const imgFrame = "/icons/arrow-right-purple.svg";
+const imgArrow1 = "/icons/arrow-pink.svg";
+const imgArrow2 = "/icons/arrow-purple.svg";
+const imgEllipse31 = "/icons/ellipse-green.svg";
 
 export default function Contact() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="py-20 px-6">
       <div className="max-w-[1240px] mx-auto">
@@ -31,14 +34,16 @@ export default function Contact() {
               <div className="flex flex-col gap-6">
                 {/* Top Row */}
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-white border border-[#9747ff] flex items-center justify-center gap-4 h-[96px] px-6 py-4 rounded-[99px] w-full sm:w-auto min-w-[253px] cursor-pointer shadow-[0_6px_0_#9747FF]"
-                  >
-                    <span className="text-[20px] font-clash font-medium text-[#9747ff]">Book a demo</span>
-                    <Image alt="" src={imgFrame} width={24} height={24} />
-                  </motion.button>
+                  <a href="https://calendly.com/connect-tribly/new-meeting" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-white border border-[#9747ff] flex items-center justify-center gap-4 h-[96px] px-6 py-4 rounded-[99px] w-full sm:w-auto min-w-[253px] cursor-pointer shadow-[0_6px_0_#9747FF]"
+                    >
+                      <span className="text-[20px] font-clash font-medium text-[#9747ff]">Book a demo</span>
+                      <Image alt="" src={imgFrame} width={24} height={24} />
+                    </motion.button>
+                  </a>
                   
                   <div className="w-[118px] h-[118px] bg-white border border-[#9747ff] rounded-full flex items-center justify-center">
                     <div className="rotate-180">
@@ -67,6 +72,7 @@ export default function Contact() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => setIsModalOpen(true)}
                     className="bg-white border border-[#9747ff] flex items-center gap-4 h-[96px] px-6 py-4 rounded-[99px] w-full sm:w-auto min-w-[267px] cursor-pointer shadow-[0_6px_0_#9747FF]"
                   >
                     <div className="flex flex-col items-start">
@@ -84,6 +90,9 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
+
+      {/* Expert Call Modal */}
+      <ExpertCallModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

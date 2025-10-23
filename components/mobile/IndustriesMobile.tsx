@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 
-// Figma assets
-const imgBg1 = "http://localhost:3845/assets/400c63686d667871f09d17f122d937c5895f55bb.png";
-const imgBg2 = "http://localhost:3845/assets/b70343960cbd0e05b2414be29aedffc7696d3b02.png";
-const imgBg3 = "http://localhost:3845/assets/e120b7a96f40d96dabe98deeef0f1ef68268ec7e.png";
-const imgBg4 = "http://localhost:3845/assets/ed41b9991a4e5b647084caba025bb9172999f13a.png";
+// Local assets
+const imgBg1 = "/images/industry-healthcare.png";
+const imgBg2 = "/images/industry-auto.png";
+const imgBg3 = "/images/industry-retail.png";
+const imgBg4 = "/images/industry-food.png";
 
 export default function IndustriesMobile() {
   const industries = [
