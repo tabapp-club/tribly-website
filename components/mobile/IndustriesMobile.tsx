@@ -10,15 +10,19 @@ const imgBg4 = "/images/industry-food.png";
 
 export default function IndustriesMobile() {
   const industries = [
-    { name: "Healthcare &\nWellness", bg: imgBg1, border: "#023e8a" },
-    { name: "Automobile &\nMobility", bg: imgBg2, border: "#9381ff" },
-    { name: "Retail &\nLifestyle", bg: imgBg3, border: "#8cb369" },
-    { name: "Food &\nHospitality", bg: imgBg4, border: "#90323d" }
+    { name: "Healthcare &\nWellness", bg: imgBg1, border: "#9747ff" },
+    { name: "Automobile &\nMobility", bg: imgBg2, border: "#9747ff" },
+    { name: "Retail &\nLifestyle", bg: imgBg3, border: "#9747ff" },
+    { name: "Food &\nHospitality", bg: imgBg4, border: "#9747ff" }
   ];
 
   return (
-    <section className="relative w-full bg-[#f0f5ff] py-[87px]">
-      <div className="max-w-[412px] mx-auto px-[16px]">
+    <section className="relative w-full bg-gradient-to-br from-[#f7f1ff] via-[#f7f1ff] to-[#ffffff] py-[87px] overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-10 right-5 w-48 h-48 bg-[#9747ff]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-5 w-64 h-64 bg-[#862ef8]/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-[412px] mx-auto px-[16px] relative">
         {/* Header */}
         <div className="flex flex-col items-center justify-center text-center text-[#061026] mb-[62px]">
           <div className="flex flex-col font-semibold justify-center text-[32px]">
@@ -34,15 +38,14 @@ export default function IndustriesMobile() {
           className="relative w-full overflow-x-scroll scrollbar-hide"
           style={{
             scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-            WebkitScrollbar: { display: 'none' }
+            msOverflowStyle: 'none'
           }}
         >
-          <div className="flex gap-[12px] w-max">
+          <div className="flex gap-[12px] w-max pb-[6px]">
             {industries.map((industry, index) => (
               <div key={index} className="relative h-[333.75px] w-[228px] flex-shrink-0">
                 <div 
-                  className="absolute bg-white h-full left-1/2 rounded-[30px] top-0 translate-x-[-50%] w-full" 
+                  className="absolute bg-white h-full left-1/2 rounded-[30px] top-0 translate-x-[-50%] w-full shadow-[0_4.5px_0_#9747ff]" 
                   style={{ borderWidth: '0.375px', borderStyle: 'solid', borderColor: industry.border }}
                 />
                 <div className="absolute h-[225.75px] left-1/2 rounded-[24px] top-[calc(50%+45px)] translate-x-[-50%] translate-y-[-50%] w-[210px] overflow-hidden">

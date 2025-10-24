@@ -94,7 +94,7 @@ export default function Footer() {
             <h3 className="text-[16px] font-clash font-medium text-[#090909] text-center">Company</h3>
           </div>
           <div className="flex flex-col gap-[8px] px-[16px] py-0 w-full">
-            <a href="#" className="text-[14px] font-manrope text-[#090909] text-left hover:text-[#9747ff] transition-colors">About</a>
+            <a href="/about" className="text-[14px] font-manrope text-[#090909] text-left hover:text-[#9747ff] transition-colors">About</a>
             <a href="#" className="text-[14px] font-manrope text-[#090909] text-left hover:text-[#9747ff] transition-colors">Careers</a>
             <a href="#" className="text-[14px] font-manrope text-[#090909] text-left hover:text-[#9747ff] transition-colors">Partner with us</a>
             <a href="#" className="text-[14px] font-manrope text-[#090909] text-left hover:text-[#9747ff] transition-colors">Terms and conditions</a>
@@ -104,8 +104,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Social Media Section */}
-      <div className="absolute flex gap-[16px] h-[42px] items-center left-[calc(50%-572px)] top-[490px]">
+      {/* Social Media Section - Hidden for now */}
+      {/* <div className="absolute flex gap-[16px] h-[42px] items-center left-[calc(50%-572px)] top-[490px]">
         <span className="text-[14px] font-clash text-[#090909] text-left">Social Media</span>
         <div className="border border-[#e2cbff] border-solid flex items-center justify-center p-[8px] rounded-[99px] w-[164px]">
           <a href="#" className="text-[14px] font-clash text-[#090909] text-center hover:text-[#9747ff] transition-colors">LinkedIN</a>
@@ -116,7 +116,7 @@ export default function Footer() {
         <div className="border border-[#e2cbff] border-solid flex items-center justify-center p-[8px] rounded-[99px] w-[164px]">
           <a href="#" className="text-[14px] font-clash text-[#090909] text-center hover:text-[#9747ff] transition-colors">Facebook</a>
         </div>
-      </div>
+      </div> */}
 
       {/* Copyright */}
       <div className="absolute flex flex-col gap-[24px] items-center justify-center left-0 overflow-clip right-0 top-[calc(50%+300px)] translate-y-[-50%] pb-[40px]">

@@ -37,7 +37,7 @@ const steps = [
 
 export default function HowItWorksMobile() {
   return (
-    <section className="relative w-full py-[87px]">
+    <section className="relative w-full py-[87px] bg-white">
       <div className="max-w-[411px] mx-auto px-[28.875px]">
         {/* Header */}
         <div className="flex flex-col items-center text-center text-black mb-[137px]">
@@ -49,40 +49,54 @@ export default function HowItWorksMobile() {
           </div>
         </div>
 
-        {/* Steps */}
-        <div className="flex flex-col gap-[30px] items-center justify-center w-full">
+        {/* Stacking Cards Container */}
+        <div className="relative">
           {steps.map((step, index) => (
-            <div key={index} className="relative h-[112.5px] w-[353.25px]">
-              {/* Border */}
-              <div className="absolute border-[0.281px] border-black border-solid h-full left-0 rounded-[280.969px] top-0 w-full" />
-              
-              {/* Image background */}
-              <div className="absolute border-[0.281px] border-black border-solid h-[108px] left-[2.25px] rounded-[280.969px] top-[2.25px] w-[142.816px] overflow-hidden">
-                <Image 
-                  alt={step.title} 
-                  className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[280.969px] size-full" 
-                  src={step.bg}
-                  width={143}
-                  height={108}
+            <div 
+              key={index} 
+              className="sticky mb-4 last:mb-0"
+              style={{ 
+                top: `calc(50vh - 56px + ${index * 12}px)`,
+                zIndex: index + 1
+              }}
+            >
+              <div className="relative h-[112.5px] w-[353.25px] mx-auto">
+                {/* Border */}
+                <div 
+                  className="absolute border-[0.281px] border-[#9747ff] border-solid h-full left-0 rounded-[280.969px] top-0 w-full bg-white" 
+                  style={{ boxShadow: '0 8px 30px 0 #F7F5FF' }}
                 />
-              </div>
-
-              {/* Content */}
-              <div className="absolute flex flex-col gap-[4.5px] items-start left-[151.59px] top-[29.98px]">
-                <div className="flex flex-col font-semibold justify-center text-[18px] text-black w-full">
-                  <p className="leading-[normal]">{step.title}</p>
+                
+                {/* Image background */}
+                <div className="absolute border-[0.281px] border-[#9747ff] border-solid h-[108px] left-[2.25px] rounded-[280.969px] top-[2.25px] w-[142.816px] overflow-hidden">
+                  <Image 
+                    alt={step.title} 
+                    className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[280.969px] size-full" 
+                    src={step.bg}
+                    width={143}
+                    height={108}
+                  />
                 </div>
-                <div className="flex gap-[4.219px] items-start text-black w-full">
-                  <div className="flex flex-col font-semibold justify-center text-[18px] text-nowrap">
-                    <p className="leading-[normal] whitespace-pre">{step.percentage}</p>
+
+                {/* Content */}
+                <div className="absolute flex flex-col gap-[4.5px] items-start left-[151.59px] top-[29.98px]">
+                  <div className="flex flex-col font-semibold justify-center text-[18px] text-black w-full">
+                    <p className="leading-[normal]">{step.title}</p>
                   </div>
-                  <div className="flex flex-col font-normal justify-center text-[6.75px] w-[145.406px]">
-                    <p className="leading-[normal]">{step.description}</p>
+                  <div className="flex gap-[4.219px] items-start text-black w-full">
+                    <div className="flex flex-col font-semibold justify-center text-[18px] text-nowrap">
+                      <p className="leading-[normal] whitespace-pre">{step.percentage}</p>
+                    </div>
+                    <div className="flex flex-col font-normal justify-center text-[6.75px] w-[145.406px]">
+                      <p className="leading-[normal]">{step.description}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
+          {/* Spacer to allow last card to scroll properly */}
+          <div className="h-[40vh]" />
         </div>
       </div>
     </section>

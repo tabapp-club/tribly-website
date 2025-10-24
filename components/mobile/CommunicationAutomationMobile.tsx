@@ -26,9 +26,11 @@ export default function CommunicationAutomationMobile() {
   const [isAutomationOn, setIsAutomationOn] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
+  const [hasAutoActivated, setHasAutoActivated] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
+      if (!sectionRef.current || hasAutoActivated) return;
 
       const rect = sectionRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
@@ -38,9 +40,10 @@ export default function CommunicationAutomationMobile() {
       // Calculate progress: 0 when entering viewport, 1 when centered, continues after
       const progress = Math.max(0, Math.min(1, 1 - (cardCenter - viewportCenter) / (viewportHeight / 2)));
       
-      // Turn on automation when card is at least 50% visible/centered
-      if (progress >= 0.5 && !isAutomationOn) {
+      // Turn on automation when card is at least 50% visible/centered (only once automatically)
+      if (progress >= 0.5 && !hasAutoActivated) {
         setIsAutomationOn(true);
+        setHasAutoActivated(true);
       }
     };
 
@@ -60,7 +63,7 @@ export default function CommunicationAutomationMobile() {
       window.removeEventListener('scroll', scrollListener);
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [isAutomationOn]);
+  }, [hasAutoActivated]);
 
   return (
     <section ref={sectionRef} className="relative w-full py-8 px-4 bg-gradient-to-b from-[#f4f1ff] to-[#ffffff]">
@@ -94,6 +97,21 @@ export default function CommunicationAutomationMobile() {
               <div className="absolute h-0 left-[-64px] top-[224px] w-[354px]">
                 <div className="absolute bottom-[-3px] left-0 right-0 top-[-3px]">
                   <Image alt="" className="block max-w-none size-full" src={imgVector1} width={354} height={6} />
+                  {/* Passing light effect */}
+                  {isAutomationOn && (
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-60"
+                      animate={{
+                        x: ['-100%', '200%']
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                      style={{ mixBlendMode: 'overlay' }}
+                    />
+                  )}
                 </div>
               </div>
               <div className="absolute left-[calc(50%+117.5px)] size-[84px] top-[calc(50%-91.5px)] translate-x-[-50%] translate-y-[-50%]">
@@ -176,6 +194,22 @@ export default function CommunicationAutomationMobile() {
               <div className="absolute h-[93px] left-[37.5px] top-[266.5px] w-[282.5px]">
                 <div className="absolute bottom-0 left-[-1.06%] right-[-1.06%] top-0">
                   <Image alt="" className="block max-w-none size-full" src={imgVector11} width={286} height={93} />
+                  {/* Passing light effect */}
+                  {isAutomationOn && (
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-60"
+                      animate={{
+                        x: ['-100%', '200%']
+                      }}
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5
+                      }}
+                      style={{ mixBlendMode: 'overlay' }}
+                    />
+                  )}
                 </div>
               </div>
               <div className="absolute bg-[#f7f5ff] border-[#c5b4fe] border-[0.843px] border-solid box-border flex gap-[4px] items-center justify-center left-[67px] px-[12px] py-[8px] rounded-[99px] top-[309px]">
@@ -190,6 +224,22 @@ export default function CommunicationAutomationMobile() {
               <div className="absolute h-[88px] left-[279px] top-[325px] w-[15px]">
                 <div className="absolute bottom-0 left-[-20%] right-0 top-[-3.41%]">
                   <Image alt="" className="block max-w-none size-full" src={imgVector14} width={18} height={91} />
+                  {/* Passing light effect */}
+                  {isAutomationOn && (
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent opacity-60"
+                      animate={{
+                        y: ['-100%', '200%']
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.3
+                      }}
+                      style={{ mixBlendMode: 'overlay' }}
+                    />
+                  )}
                 </div>
               </div>
               <div className="absolute box-border flex items-center left-[245px] pl-0 pr-[24px] py-0 top-[409px]">
@@ -256,6 +306,22 @@ export default function CommunicationAutomationMobile() {
               <div className="absolute h-[227px] left-[198.5px] top-[325px] w-[51.5px]">
                 <div className="absolute bottom-0 left-[-5.83%] right-0 top-[-1.32%]">
                   <Image alt="" className="block max-w-none size-full" src={imgVector15} width={55} height={230} />
+                  {/* Passing light effect */}
+                  {isAutomationOn && (
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent opacity-60"
+                      animate={{
+                        y: ['-100%', '200%']
+                      }}
+                      transition={{
+                        duration: 2.8,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.4
+                      }}
+                      style={{ mixBlendMode: 'overlay' }}
+                    />
+                  )}
                 </div>
               </div>
               <div className="absolute bg-[#f7f5ff] border-[#c5b4fe] border-[0.843px] border-solid box-border flex gap-[4px] items-center justify-center left-[133px] px-[12px] py-[8px] rounded-[99px] top-[500px]">

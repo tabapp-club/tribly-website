@@ -10,9 +10,9 @@ const imgFrame = "/icons/arrow-right-purple.svg";
 
 export default function AboutPage() {
   const stats = [
-    { number: "500+", label: "Happy Clients" },
+    { number: "20+", label: "Happy Clients" },
     { number: "98%", label: "Customer Retention" },
-    { number: "5M+", label: "Messages Sent" },
+    { number: "20k+", label: "Messages Sent" },
     { number: "24/7", label: "Support Available" }
   ];
 
@@ -132,12 +132,12 @@ export default function AboutPage() {
                 <div className="bg-gradient-to-b from-[#f4f1ff] to-[#ffffff] rounded-[30px] p-12">
                   <div className="space-y-8">
                     <div>
-                      <div className="text-[64px] font-semibold mb-2 text-[#9747ff]">2023</div>
+                      <div className="text-[64px] font-semibold mb-2 text-[#9747ff]">2024</div>
                       <div className="text-[18px] text-gray-600">Company Founded</div>
                     </div>
                     <div className="h-px bg-[#9747ff]/10"></div>
                     <div>
-                      <div className="text-[64px] font-semibold mb-2 text-[#9747ff]">500+</div>
+                      <div className="text-[64px] font-semibold mb-2 text-[#9747ff]">20+</div>
                       <div className="text-[18px] text-gray-600">Businesses Transformed</div>
                     </div>
                     <div className="h-px bg-[#9747ff]/10"></div>

@@ -63,10 +63,7 @@ const menuItems = {
   ],
   Resources: [
     "Documentation",
-    "API Reference",
-    "Help Center",
-    "Blog",
-    "Case Studies"
+    "API Reference"
   ]
 };
 
@@ -126,11 +123,20 @@ export default function Navbar() {
         <div className="hidden lg:flex content-stretch gap-[16px] items-center justify-center relative shrink-0">
           {Object.keys(menuItems).map((item) => (
             <div key={item} className="relative">
-              {item === "About" || item === "Pricing" ? (
-                // Non-clickable for About and Pricing
-                <div className="font-manrope font-bold leading-[26px] relative text-[#090909] text-[15.6px] text-nowrap whitespace-pre cursor-default px-[8px] py-0">
-                  {item}
-                </div>
+              {item === "About" ? (
+                // Clickable link for About
+                <Link href="/about">
+                  <div className="font-manrope font-bold leading-[26px] relative text-[#090909] text-[15.6px] text-nowrap whitespace-pre cursor-pointer px-[8px] py-0 hover:text-[#9747ff] transition-colors">
+                    {item}
+                  </div>
+                </Link>
+              ) : item === "Pricing" ? (
+                // Clickable link for Pricing
+                <Link href="/pricing">
+                  <div className="font-manrope font-bold leading-[26px] relative text-[#090909] text-[15.6px] text-nowrap whitespace-pre cursor-pointer px-[8px] py-0 hover:text-[#9747ff] transition-colors">
+                    {item}
+                  </div>
+                </Link>
               ) : (
                 // Dropdown for other items
                 <button 
@@ -259,7 +265,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-full bg-white shadow-xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-full bg-[#F7F1FF] shadow-xl z-50 lg:hidden overflow-y-auto"
             >
               <div className="p-6 sm:p-8 max-w-[400px] mx-auto">
                 {/* Close Button */}
@@ -279,11 +285,20 @@ export default function Navbar() {
                 <div className="space-y-6 sm:space-y-8">
                   {Object.keys(menuItems).map((item) => (
                     <div key={item}>
-                      {item === "About" || item === "Pricing" ? (
-                        // Non-clickable for About and Pricing in mobile
-                        <div className="w-full text-left font-manrope font-bold text-[18px] text-[#090909] cursor-default py-3 block">
-                          {item}
-                        </div>
+                      {item === "About" ? (
+                        // Clickable link for About in mobile
+                        <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
+                          <div className="w-full text-left font-manrope font-bold text-[18px] text-[#090909] hover:text-[#9747ff] transition-colors cursor-pointer py-3 block">
+                            {item}
+                          </div>
+                        </Link>
+                      ) : item === "Pricing" ? (
+                        // Clickable link for Pricing in mobile
+                        <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}>
+                          <div className="w-full text-left font-manrope font-bold text-[18px] text-[#090909] hover:text-[#9747ff] transition-colors cursor-pointer py-3 block">
+                            {item}
+                          </div>
+                        </Link>
                       ) : (
                         // Dropdown for other items in mobile
                         <>

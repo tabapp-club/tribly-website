@@ -82,7 +82,7 @@ export default function Hero() {
         </div>
 
         {/* Logo Element - Right side with videos/images */}
-        <div className="absolute content-stretch flex flex-col gap-[18px] h-[392px] items-start left-[calc(58.333%-8px)] top-[177px] w-[508px]">
+        <div className="absolute content-stretch flex flex-col gap-[18px] h-[392px] items-start left-[calc(58.333%-8px)] top-[217px] w-[508px]">
           {/* Row 1 */}
           <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
             <motion.div
@@ -102,7 +102,7 @@ export default function Hero() {
                   playsInline 
                   muted
                 >
-                  <source src="/_videos/v1/31cb4578928cbbffe532058e6f9bbd610888f1bf" />
+                  <source src="/Videos/People.mp4" />
                 </video>
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ export default function Hero() {
                 playsInline 
                 muted
               >
-                <source src="/_videos/v1/f29d3e60f967987fcba1eeb4e3423f46e02f217e" />
+                <source src="/Videos/red-video.mp4" />
               </video>
             </div>
             <div className="h-[106.5px] relative rounded-[749.25px] shrink-0 w-[383.254px] overflow-hidden">
@@ -156,7 +156,7 @@ export default function Hero() {
                 playsInline 
                 muted
               >
-                <source src="/_videos/v1/228c14168d61d16c2cafe23f87188a55d2c25245" />
+                <source src="/Videos/AI-video.mp4" />
               </video>
             </div>
           </motion.div>
@@ -180,7 +180,7 @@ export default function Hero() {
                   playsInline 
                   muted
                 >
-                  <source src="/_videos/v1/4dfb7e2664243a72c824eb4effa1d0d47bedbf05" />
+                  <source src="/Videos/anima.mp4" />
                 </video>
               </div>
             </motion.div>
@@ -202,7 +202,7 @@ export default function Hero() {
                   playsInline 
                   muted
                 >
-                  <source src="/_videos/v1/84a0e5c0faf62f19a3aa552015573940ff58fac1" />
+                  <source src="/Videos/game.mp4" />
                 </video>
               </div>
             </motion.div>

@@ -1,42 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const industries = [
   {
     name: "Healthcare & Wellness",
-    color: "border-[#023e8a]",
-    shadow: "shadow-[0_6px_0_#023e8a]",
-    gradient: "from-blue-50 to-blue-100",
-    icon: "🏥",
+    color: "border-[#9747ff]",
+    shadow: "shadow-[0_6px_0_#9747ff]",
+    image: "/images/industry-healthcare.png",
   },
   {
     name: "Automobile & Mobility",
-    color: "border-[#9381ff]",
-    shadow: "shadow-[0_6px_0_#9381ff]",
-    gradient: "from-purple-50 to-purple-100",
-    icon: "🚗",
+    color: "border-[#9747ff]",
+    shadow: "shadow-[0_6px_0_#9747ff]",
+    image: "/images/industry-auto.png",
   },
   {
     name: "Retail & Lifestyle",
-    color: "border-[#8cb369]",
-    shadow: "shadow-[0_6px_0_#8cb369]",
-    gradient: "from-green-50 to-green-100",
-    icon: "🛍️",
+    color: "border-[#9747ff]",
+    shadow: "shadow-[0_6px_0_#9747ff]",
+    image: "/images/industry-retail.png",
   },
   {
     name: "Food & Hospitality",
-    color: "border-[#90323d]",
-    shadow: "shadow-[0_6px_0_#90323d]",
-    gradient: "from-red-50 to-red-100",
-    icon: "🍽️",
+    color: "border-[#9747ff]",
+    shadow: "shadow-[0_6px_0_#9747ff]",
+    image: "/images/industry-food.png",
   },
 ];
 
 export default function Industries() {
   return (
-    <section className="py-20 px-6 bg-[#f0f5ff]">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="relative py-20 px-6 bg-gradient-to-br from-[#f7f1ff] via-[#f7f1ff] to-[#ffffff] overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-20 right-10 w-64 h-64 bg-[#9747ff]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#862ef8]/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-[1440px] mx-auto relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,10 +72,14 @@ export default function Industries() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
-                className={`absolute bottom-6 left-6 right-6 h-[271px] rounded-[29px] bg-gradient-to-br ${industry.gradient} flex items-center justify-center overflow-hidden`}
+                className="absolute bottom-6 left-6 right-6 h-[271px] rounded-[29px] overflow-hidden"
               >
-                <span className="text-[108px] opacity-20">{industry.icon}</span>
-                <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent" />
+                <Image
+                  src={industry.image}
+                  alt={industry.name}
+                  fill
+                  className="object-cover"
+                />
               </motion.div>
             </motion.div>
           ))}

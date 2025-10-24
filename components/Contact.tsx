@@ -55,8 +55,8 @@ export default function Contact() {
                 {/* Video Row */}
                 <div className="w-full h-[118px] border border-[#9747ff] rounded-[999px] p-1.5">
                   <div className="w-full h-full rounded-[999px] overflow-hidden">
-                    <video autoPlay className="w-full h-full object-cover" controlsList="nodownload" loop playsInline>
-                      <source src="/_videos/v1/84a0e5c0faf62f19a3aa552015573940ff58fac1" />
+                    <video autoPlay muted className="w-full h-full object-cover" controlsList="nodownload" loop playsInline>
+                      <source src="/Videos/people.mp4" />
                     </video>
                   </div>
                 </div>

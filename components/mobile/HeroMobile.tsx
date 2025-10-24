@@ -82,7 +82,7 @@ export default function HeroMobile() {
         </div>
 
         {/* Logo element with videos */}
-        <div className="absolute content-stretch flex flex-col gap-[12.012px] h-[261.591px] items-start left-[17px] top-[568px] w-[339px]">
+        <div className="absolute content-stretch flex flex-col gap-[12.012px] h-[261.591px] items-start left-[17px] top-[608px] w-[339px]">
           {/* Row 1 */}
           <div className="content-stretch flex gap-[8.008px] items-center relative shrink-0">
             <motion.div
@@ -102,7 +102,7 @@ export default function HeroMobile() {
                   playsInline 
                   muted
                 >
-                  <source src="/_videos/v1/31cb4578928cbbffe532058e6f9bbd610888f1bf" />
+                  <source src="/Videos/People.mp4" />
                 </video>
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ export default function HeroMobile() {
                 playsInline 
                 muted
               >
-                <source src="/_videos/v1/f29d3e60f967987fcba1eeb4e3423f46e02f217e" />
+                <source src="/Videos/red-video.mp4" />
               </video>
             </div>
             <div className="h-[71.07px] relative rounded-[499.992px] shrink-0 w-[255.754px] overflow-hidden">
@@ -156,7 +156,7 @@ export default function HeroMobile() {
                 playsInline 
                 muted
               >
-                <source src="/_videos/v1/228c14168d61d16c2cafe23f87188a55d2c25245" />
+                <source src="/Videos/AI-video.mp4" />
               </video>
             </div>
           </motion.div>
@@ -180,7 +180,7 @@ export default function HeroMobile() {
                   playsInline 
                   muted
                 >
-                  <source src="/_videos/v1/4dfb7e2664243a72c824eb4effa1d0d47bedbf05" />
+                  <source src="/Videos/anima.mp4" />
                 </video>
               </div>
             </motion.div>
@@ -202,7 +202,7 @@ export default function HeroMobile() {
                   playsInline 
                   muted
                 >
-                  <source src="/_videos/v1/84a0e5c0faf62f19a3aa552015573940ff58fac1" />
+                  <source src="/Videos/game.mp4" />
                 </video>
               </div>
             </motion.div>

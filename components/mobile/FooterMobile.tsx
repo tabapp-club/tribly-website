@@ -145,23 +145,29 @@ export default function FooterMobile() {
             </div>
 
             <div className="flex flex-col gap-[8px] items-start px-[16px] w-full">
-              {[
-                "About",
-                "Careers",
-                "Partner with us",
-                "Terms and conditions",
-                "Privacy policy",
-                "Contact us"
-              ].map((item, index) => (
-                <button key={index} className="font-normal text-[#090909] text-[14px] text-left">
-                  <p className="leading-[26px] whitespace-pre">{item}</p>
-                </button>
-              ))}
+              <a href="/about" className="font-normal text-[#090909] text-[14px] text-left hover:text-[#9747ff] transition-colors">
+                <p className="leading-[26px] whitespace-pre">About</p>
+              </a>
+              <button className="font-normal text-[#090909] text-[14px] text-left">
+                <p className="leading-[26px] whitespace-pre">Careers</p>
+              </button>
+              <button className="font-normal text-[#090909] text-[14px] text-left">
+                <p className="leading-[26px] whitespace-pre">Partner with us</p>
+              </button>
+              <button className="font-normal text-[#090909] text-[14px] text-left">
+                <p className="leading-[26px] whitespace-pre">Terms and conditions</p>
+              </button>
+              <button className="font-normal text-[#090909] text-[14px] text-left">
+                <p className="leading-[26px] whitespace-pre">Privacy policy</p>
+              </button>
+              <button className="font-normal text-[#090909] text-[14px] text-left">
+                <p className="leading-[26px] whitespace-pre">Contact us</p>
+              </button>
             </div>
           </div>
 
-          {/* Social Media */}
-          <div className="flex flex-col gap-[16px] items-start justify-center px-[16px] w-full">
+          {/* Social Media - Hidden for now */}
+          {/* <div className="flex flex-col gap-[16px] items-start justify-center px-[16px] w-full">
             <div className="font-normal text-[#090909] text-[14px]">
               <p className="leading-[26px] whitespace-pre">Social Media</p>
             </div>
@@ -182,7 +188,7 @@ export default function FooterMobile() {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright at bottom */}
