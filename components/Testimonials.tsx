@@ -9,8 +9,8 @@ const testimonials = [
     text: "Turn everyday transactions into an AI-driven two-way conversation to drive higher customer engagement, across almost every function and industry imaginable.",
     initial: "V",
     color: "bg-[#4A90E2]",
-    borderColor: "#4A90E2",
-    shadowColor: "shadow-[0_6px_0_#4A90E2]",
+    borderColor: "#9747ff",
+    shadowColor: "shadow-[0_4px_0_#9747ff]",
   },
   {
     name: "Rajesh Kumar",
@@ -18,8 +18,8 @@ const testimonials = [
     text: "Tribly has transformed how we engage with our customers. The automation features save us hours every week while improving our retention rates significantly.",
     initial: "R",
     color: "bg-[#7B68EE]",
-    borderColor: "#7B68EE",
-    shadowColor: "shadow-[0_6px_0_#7B68EE]",
+    borderColor: "#9747ff",
+    shadowColor: "shadow-[0_4px_0_#9747ff]",
   },
   {
     name: "Priya Sharma",
@@ -27,8 +27,8 @@ const testimonials = [
     text: "The insights we get from Tribly are game-changing. We can now predict customer behavior and act proactively to prevent churn.",
     initial: "P",
     color: "bg-[#50C878]",
-    borderColor: "#50C878",
-    shadowColor: "shadow-[0_6px_0_#50C878]",
+    borderColor: "#9747ff",
+    shadowColor: "shadow-[0_4px_0_#9747ff]",
   },
   {
     name: "Amit Patel",
@@ -36,8 +36,8 @@ const testimonials = [
     text: "Best investment we made for our business. The ROI has been incredible, and our customer satisfaction scores have never been higher.",
     initial: "A",
     color: "bg-[#FFB347]",
-    borderColor: "#FFB347",
-    shadowColor: "shadow-[0_6px_0_#FFB347]",
+    borderColor: "#9747ff",
+    shadowColor: "shadow-[0_4px_0_#9747ff]",
   },
   {
     name: "Sneha Reddy",
@@ -45,8 +45,8 @@ const testimonials = [
     text: "The AI-powered campaigns are brilliant. They feel personal and relevant, which has dramatically improved our engagement rates.",
     initial: "S",
     color: "bg-[#FF69B4]",
-    borderColor: "#FF69B4",
-    shadowColor: "shadow-[0_6px_0_#FF69B4]",
+    borderColor: "#9747ff",
+    shadowColor: "shadow-[0_4px_0_#9747ff]",
   },
   {
     name: "Vikram Singh",
@@ -54,8 +54,8 @@ const testimonials = [
     text: "Tribly's WhatsApp integration is seamless. Our customers love the instant communication, and it has boosted our repeat purchase rate.",
     initial: "V",
     color: "bg-[#9370DB]",
-    borderColor: "#9370DB",
-    shadowColor: "shadow-[0_6px_0_#9370DB]",
+    borderColor: "#9747ff",
+    shadowColor: "shadow-[0_4px_0_#9747ff]",
   },
 ];
 
