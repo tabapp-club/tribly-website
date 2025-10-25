@@ -43,7 +43,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed mb-10">
-              We're on a mission to help businesses build lasting relationships with their customers through intelligent automation and AI-powered insights.
+              We're on a mission to help businesses across India build lasting relationships with their customers through intelligent automation and AI-powered insights. Serving Andhra Pradesh, Telangana, Bengaluru, and beyond.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -112,13 +112,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-[18px] text-gray-700 leading-relaxed">
                 <p>
-                  Tribly was born from a simple observation: businesses were losing customers not because of bad products, but because of poor engagement and follow-up.
+                  Tribly was born from a simple observation: businesses across India were losing customers not because of bad products, but because of poor engagement and follow-up.
                 </p>
                 <p>
-                  We saw countless businesses struggling to maintain meaningful relationships with their customers. Manual follow-ups were time-consuming, inconsistent, and often missed entirely.
+                  We saw countless businesses in Andhra Pradesh, Telangana, Bengaluru, and other Indian cities struggling to maintain meaningful relationships with their customers. Manual follow-ups were time-consuming, inconsistent, and often missed entirely.
                 </p>
                 <p>
-                  That's when we decided to build Tribly - an AI-powered platform that automates customer engagement while keeping it personal and relevant. Today, we help hundreds of businesses across industries retain more customers and grow their revenue.
+                  That's when we decided to build Tribly - an AI-powered platform that automates customer engagement while keeping it personal and relevant. Today, we help hundreds of businesses across India retain more customers and grow their revenue through WhatsApp automation and smart marketing.
                 </p>
                 <p className="font-semibold text-[#9747ff]">
                   Our journey is just beginning, and we're excited to have you as part of it.

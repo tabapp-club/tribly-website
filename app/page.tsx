@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import HowItWorks from "@/components/HowItWorks";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 
 // Mobile Components
 import HeroMobile from "@/components/mobile/HeroMobile";
@@ -26,6 +27,7 @@ import FooterMobile from "@/components/mobile/FooterMobile";
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <StructuredData />
       <Navbar />
       
       {/* Desktop Version - Hidden on mobile */}
@@ -47,7 +49,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-[24px] text-black max-w-[1002px] mx-auto leading-normal">
-              Tribly gives your business the AI advantage—smarter targeting, personalized automation, and insights that bring customers back again and again.
+              Tribly gives your business the AI advantage—smarter targeting, personalized automation, and insights that bring customers back again and again. Perfect for businesses in Andhra Pradesh, Telangana, and Bengaluru.
             </p>
           </div>
         </section>

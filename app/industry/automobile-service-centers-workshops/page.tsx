@@ -4,6 +4,41 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/mobile/FooterMobile";
+import StructuredData from "@/components/StructuredData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "WhatsApp Automation for Auto Service Centers | Tribly India",
+  description: "Boost auto service center bookings by 80% with Tribly's WhatsApp automation. Increase repeat customers 5x, reduce no-shows 70%. Serving Andhra Pradesh, Telangana, Bengaluru.",
+  keywords: [
+    "auto service center automation",
+    "WhatsApp booking system",
+    "automobile workshop automation",
+    "service center management",
+    "customer retention auto industry",
+    "automotive marketing automation",
+    "service booking automation India",
+    "auto service center software",
+    "automobile workshop management",
+    "car service automation",
+    "auto repair booking system",
+    "service center WhatsApp automation",
+    "automotive customer engagement",
+    "auto service center India",
+    "car workshop automation",
+    "service center booking system",
+    "automotive business automation",
+    "auto service marketing",
+    "car service management",
+    "automobile workshop software"
+  ],
+  openGraph: {
+    title: "WhatsApp Automation for Auto Service Centers | Tribly India",
+    description: "Boost auto service center bookings by 80% with Tribly's WhatsApp automation. Increase repeat customers 5x, reduce no-shows 70%.",
+    type: "website",
+    locale: "en_IN",
+  },
+};
 
 const imgFrame = "/icons/arrow-right-purple.svg";
 
@@ -120,6 +155,7 @@ export default function AutomobileServiceCentersWorkshopsPage() {
 
  return (
  <main className="min-h-screen bg-white">
+ <StructuredData />
  <Navbar />
 
  {/* Hero Section */}

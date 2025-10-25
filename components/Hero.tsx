@@ -35,7 +35,7 @@ export default function Hero() {
         {/* Subtitle */}
         <div className="absolute flex flex-col justify-center leading-[0] left-[106px] not-italic text-[24px] text-black top-[525px] translate-y-[-50%] w-[652px]">
           <p className="leading-[normal]">
-            Tribly helps you retain more customers, boost revenue, and run automated campaigns that actually work.
+            Tribly helps you retain more customers, boost revenue, and run automated WhatsApp marketing campaigns that actually work. #1 customer engagement platform.
           </p>
         </div>
 
@@ -202,7 +202,7 @@ export default function Hero() {
                   playsInline 
                   muted
                 >
-                  <source src="/Videos/game.mp4" />
+                  <source src="/Videos/growth.mp4" />
                 </video>
               </div>
             </motion.div>
